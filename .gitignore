@@ -1,0 +1,5 @@
+*.duckdb
+*.db
+data_raw/
+__pycache__/
+.streamlit/
