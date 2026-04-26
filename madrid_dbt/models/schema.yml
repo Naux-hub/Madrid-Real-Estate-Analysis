@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_madrid_houses
+    description: "Cleaned and staged Madrid real estate listings"
+    columns:
+      - name: id
+        description: "Unique listing ID"
+        tests:
+          - unique
+          - not_null
+      - name: buy_price
+        description: "Purchase price in euros"
+        tests:
+          - not_null
+      - name: sq_mt_built
+        description: "Built area in square meters"
+        tests:
+          - not_null
+
+  - name: mart_price_by_neighborhood
+    description: "Average pricing metrics per neighborhood"
+    columns:
+      - name: neighborhood_id
+        description: "Neighborhood identifier"
+        tests:
+          - unique
+          - not_null
+      - name: avg_price
+        description: "Average purchase price in euros"
+        tests:
+          - not_null
+
+  - name: mart_price_drivers
+    description: "Impact of property features on price"
